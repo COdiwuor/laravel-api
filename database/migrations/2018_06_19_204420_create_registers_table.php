@@ -22,6 +22,7 @@ class CreateRegistersTable extends Migration
             $table->string('gender');
             $table->string('height');
             $table->string('weight');
+            $table->string('date_of_birth');
             $table->string('preferred_workout');
             $table->timestamps();
         });
