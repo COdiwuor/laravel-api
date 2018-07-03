@@ -15,11 +15,17 @@ class RegisterController extends Controller
     public function index()
     {
         $register= new Register();
-        $register->first_name="cyril";
-        $register->last_name="owuor";
-        $register->email="cyrilondime@gmail.com";
-        $register->password="Rashford19";
-        $register->phone_number="0701252134";
+        $register->username=request('username');
+        $register->email=request("email");
+        $register->password=request('password');
+        $register->phone_number=request('phone_number');
+        $register->gender=request('gender');
+        $register->height=request('height');
+        $register->weight=request('weight');
+        $register->preferred_workout=request('preferred_workout');
+        
+        
+        
         $register->save();
 
     }
