@@ -22,6 +22,7 @@ class RegisterController extends Controller
         $register->gender=request('gender');
         $register->height=request('height');
         $register->weight=request('weight');
+        $register->date_of_birth=request('date_of_birth');
         $register->preferred_workout=request('preferred_workout');
         
         
