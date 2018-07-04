@@ -37,6 +37,7 @@ class RegisterController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    
     public function create($Username,$Password){
         $Login = Register()::all->where('username'=>$Username)->where ('password'=>$Password);
        
