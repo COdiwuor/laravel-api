@@ -38,7 +38,8 @@ class RegisterController extends Controller
     
     public function create($Username,$Password)
     {
-        $Login = Register()::all->where('username'=>$Username)->where ('password'=>$Password);
+        $Login = Register::all()->where('username',$Username)->where('password',$Password);
+        return $Login->toArray();
        
     }
 
