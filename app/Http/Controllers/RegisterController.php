@@ -25,8 +25,6 @@ class RegisterController extends Controller
         $register->date_of_birth=request('date_of_birth');
         $register->preferred_workout=request('preferred_workout');
         
-        
-        
         $register->save();
   
 
@@ -38,7 +36,8 @@ class RegisterController extends Controller
      * @return \Illuminate\Http\Response
      */
     
-    public function create($Username,$Password){
+    public function create($Username,$Password)
+    {
         $Login = Register()::all->where('username'=>$Username)->where ('password'=>$Password);
        
     }
